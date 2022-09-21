@@ -3,19 +3,6 @@ import * as ReactDOM from "react-dom";
 import {BrowserRouter, Routes, Route, Link, useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
 
-const MOVIES = [
-    {
-        title: "The Matrix",
-        plot: "A computer hacker learns from mysterious rebels about the true nature of his reality.",
-        year: 1999
-    },
-    {
-        title: "The Color Purple",
-        plot: "A black Southern woman (Whoopi Goldberg) struggles to find her identity after suffering years of abuse from her father.",
-        year: 1985
-    }
-];
-
 
 function FrontPage() {
     return <div>
