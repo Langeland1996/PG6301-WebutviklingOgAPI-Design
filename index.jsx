@@ -1,8 +1,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import {useState} from "react";
 
-const movies = [
+const MOVIES = [
     {
         title: "The Matrix",
         plot: "A computer hacker learns from mysterious rebels about the true nature of his reality.",
@@ -26,14 +27,43 @@ function FrontPage() {
     </div>;
 }
 
-function ListMovies() {
+function NewMovie(){
+    const [title, setTitle] = useState("");
+    const [plot, setPlot] = useState("");
+    const [year, setYear] = useState("");
+
+    function handleSubmit(e){
+        e.preventDefault();
+        MOVIES.push({title, plot, year});
+    }
+
+    return <form onSubmit={handleSubmit}>
+        <h1>New movie</h1>
+        <div>
+            <label>Title: <input value={title} onChange={e => setTitle(e.target.value)} /></label>
+        </div>
+        <div>
+            <label>Plot: <textarea value={plot} onChange={e => setPlot(e.target.value)} /></label>
+        </div>
+        <div>
+            <label>Year: <input value={year} onChange={e => setYear(e.target.value)} /></label>
+        </div>
+        <button>Submit</button>
+
+        <pre>
+            {JSON.stringify({title, plot, year})}
+        </pre>
+    </form>;
+}
+
+function ListMovies({movies}) {
     return <div>
         <h1>List movies</h1>
         {movies.map(m =>
-            <>
+            <div key={m.title}>
                 <h2>{m.title} ({m.year})</h2>
                 <div>{m.plot}</div>
-            </>
+            </div>
         )}
     </div>;
 }
@@ -42,8 +72,8 @@ function Application() {
     return <BrowserRouter>
         <Routes>
             <Route path={"/"} element={<FrontPage/>}/>
-            <Route path={"/movies/new"} element={<h1>New movies</h1>}/>
-            <Route path={"/movies"} element={<ListMovies/>}/>
+            <Route path={"/movies/new"} element={<NewMovie/>}/>
+            <Route path={"/movies"} element={<ListMovies movies={MOVIES}/>}/>
         </Routes>
     </BrowserRouter>;
 
