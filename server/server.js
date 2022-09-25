@@ -4,7 +4,7 @@ const app = express();
 
 const MOVIES = [
     {
-        title: "The Matrix",
+        title: "The Matrix - from server",
         plot: "A computer hacker learns from mysterious rebels about the true nature of his reality.",
         year: 1999
     },
