@@ -9,7 +9,7 @@ const MOVIES = [
         year: 1999
     },
     {
-        title: "The Color Purple",
+        title: "The Color Purple - from server",
         plot: "A black Southern woman (Whoopi Goldberg) struggles to find her identity after suffering years of abuse from her father.",
         year: 1985
     }
