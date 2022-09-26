@@ -3,3 +3,7 @@
 /client/node_modules/
 /node_modules/
 /server/node_modules/
+/.parcel-cache/
+/package.json
+/dist/
+/.idea/inspectionProfiles/Project_Default.xml

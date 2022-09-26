@@ -1,0 +1,33 @@
+{
+  "name": "movie-database",
+  "version": "1.0.0",
+  "description": "Lecture 2 of 12",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "clean": "rimraf .parcel-cache",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Langeland1996/PG6301-WebutviklingOgAPI-Design.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Langeland1996/PG6301-WebutviklingOgAPI-Design/issues"
+  },
+  "homepage": "https://github.com/Langeland1996/PG6301-WebutviklingOgAPI-Design#readme",
+  "devDependencies": {
+    "parcel": "^2.7.0",
+    "process": "^0.11.10",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.1",
+    "reactdom": "^2.0.0"
+  }
+}
