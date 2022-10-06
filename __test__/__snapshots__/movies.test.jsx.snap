@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`movie application check if body == movies 1`] = `"<h1>Movies</h1>"`;
+
+exports[`movie application check if snapshot is matching 1`] = `"<h1>Movies</h1>"`;
+
+exports[`movie application shows movie list 1`] = `"<h1>Movies</h1>"`;
