@@ -1,7 +1,6 @@
 import React from "react";
 import {createRoot} from "react-dom/client";
-import {ListMovies} from "../application";
-import {} from "react-dom/test-utils";
+import {ListMovies, NewMovieForm} from "../application";
 import {act} from "@testing-library/react";
 
 describe("movie application", () => {
@@ -13,9 +12,8 @@ describe("movie application", () => {
             createRoot(element).render(<ListMovies/>)
         })
 
-        expect(element.querySelector("h1").innerHTML).toEqual("Movies")
+        expect(element.querySelector("h1").innerHTML).toEqual("List movies")
 
-        expect(element.innerHTML).toMatchSnapshot();
     })
 
 
@@ -28,5 +26,16 @@ describe("movie application", () => {
         })
 
         expect(element.innerHTML).toMatchSnapshot();
+    })
+
+    it("show me movie form", () => {
+        const element = document.createElement("div")
+
+        act(() => {
+            createRoot(element).render(<NewMovieForm/>)
+        })
+
+        expect(element.innerHTML).toMatchSnapshot();
+
     })
 })
