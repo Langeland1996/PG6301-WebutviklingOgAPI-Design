@@ -4,4 +4,4 @@ exports[`movie application check if body == movies 1`] = `"<h1>Movies</h1>"`;
 
 exports[`movie application check if snapshot is matching 1`] = `"<div><h1>List movies</h1><ul><li>Movie 1</li><li>Movie 1</li></ul></div>"`;
 
-exports[`movie application show me movie form 1`] = `"<form><h1>Add new movie</h1><div>title: <input></div><div>year: <input></div><div>plot: <div><textarea></textarea></div></div></form>"`;
+exports[`movie application show me movie form 1`] = `"<form><h1>Add new movie</h1><div>title: <input data-testid="title" value="title"></div><div>year: <input data-testid="year"></div><div>plot: <div><textarea data-testid="plot"></textarea></div></div></form>"`;

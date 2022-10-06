@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 export function ListMovies() {
     return <div>
@@ -10,17 +10,29 @@ export function ListMovies() {
     </div>
 }
 
-export function NewMovieForm() {
-    return <form>
+export function NewMovieForm({onAddMovie}) {
+    const [title, setTitle] = useState("");
+    const [year, setYear] = useState("");
+    const [plot, setPlot] = useState("");
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        onAddMovie({title, year, plot});
+    }
+
+    return <form onSubmit={handleSubmit}>
         <h1>Add new movie</h1>
         <div>
-            title: <input/>
+
+            Title: <input data-testid="title" value={title} onChange={e => setTitle(e.target.value)} />
         </div>
         <div>
-            year: <input/>
+
+            Year: <input data-testid="year" value={year} onChange={e => setYear(e.target.value)} />
         </div>
         <div>
-            plot: <div><textarea/></div>
+            Plot:
+            <div><textarea data-testid="plot" /></div>
         </div>
-    </form>
+    </form>;
 }
