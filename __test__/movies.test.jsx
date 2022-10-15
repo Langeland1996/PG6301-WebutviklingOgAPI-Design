@@ -7,7 +7,7 @@ import * as reactDOM from "react-dom";
 
 describe("movie application", () => {
 
-    it("check if body == movies", () => {
+    it("Check if listMovies h1 contains - How to check if function contains element", () => {
         const element = document.createElement("div");
 
         act(() => {
@@ -20,7 +20,7 @@ describe("movie application", () => {
 
 
 
-    it("check if snapshot is matching", () => {
+    it("check if snapshot is matching \"ListMovies\"", () => {
         const element = document.createElement("div");
 
         act(() => {
@@ -30,7 +30,7 @@ describe("movie application", () => {
         expect(element.innerHTML).toMatchSnapshot();
     })
 
-    it("show me movie form", () => {
+    it("check if snapshot is matching \"NewMovieForm\"", () => {
         const element = document.createElement("div")
 
         act(() => {
@@ -41,7 +41,7 @@ describe("movie application", () => {
 
     })
 
-    it("submit new movie", async () => {
+    it("submit new movie - How to test input through a function", async () => {
         const onAddMovie = jest.fn();
         const element = document.createElement("div")
 
