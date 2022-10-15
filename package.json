@@ -20,7 +20,8 @@
   },
   "scripts": {
     "dev": "parcel index.html",
-    "test": "jest"
+    "test": "jest",
+    "verify": "jest --collectCoverage"
   },
   "repository": {
     "type": "git",
@@ -34,7 +35,10 @@
   },
   "homepage": "https://github.com/Langeland1996/PG6301-WebutviklingOgAPI-Design#readme",
   "jest": {
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "collectCoverageFrom": [
+      "*.jsx"
+    ]
   },
   "babel": {
     "presets": [
