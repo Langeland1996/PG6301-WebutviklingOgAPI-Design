@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "Lecture03-React_kode_kvalitet" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "Lecture03-React_kode_kvalitet" ]
 
 jobs:
   build:
