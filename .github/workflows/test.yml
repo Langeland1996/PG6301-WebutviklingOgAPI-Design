@@ -17,6 +17,11 @@ jobs:
           node-version: 16.x
           cache: 'npm'
       - run: npm ci
+        run: |
+          while read -r cmd
+               do
+                 eval sudo $cmd
+               done < <(Rscript -e 'cat(remotes::system_requirements("ubuntu", "20.04"), sep = "\n")')
       - run: npm run verify
       - name: Coveralls
         uses: coverallsapp/github-action@master
