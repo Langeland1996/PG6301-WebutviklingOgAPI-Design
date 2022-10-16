@@ -1,6 +1,10 @@
+//download express dep
 import express from "express";
+//download bodyParser dep
+import bodyParser from "body-parser";
 
 const app = express();
+app.use(bodyParser.json());
 
 app.get("/login", (req, res) => {
     res.json({
@@ -8,10 +12,27 @@ app.get("/login", (req, res) => {
     });
 })
 
+const users = [
+    {
+        username: "admin", password: "secret"
+    }
+]
+
 app.post("/login", (req, res) => {
-    //set something so that GET /login returns username
-    console.log("Test");
-    res.end();
+    // [x] read body as json
+    // [x] check if username and password is correct
+    //set a cookie
+
+    const body = req.body;
+    const username = body.username;
+    const password = body.password;
+
+    //if username and password in the body == users values => 200 OK
+    if(users.find(u => u.username === username).password === password){
+        res.sendStatus(200)
+    } else {
+        res.sendStatus(401)
+    }
 })
 
 //Tells the server to listen to port 3000
