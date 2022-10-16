@@ -1,16 +1,21 @@
 {
   "name": "PG6301-WebutviklingOgAPI-DesignClone",
   "version": "1.0.0",
-  "description": "ExpressJS web server for Java (Node)\r ====================================",
+  "description": "ExpressJS web server for Java (Node)",
   "main": "index.js",
+  "type": "module",
   "dependencies": {
+    "express": "^4.18.2",
     "parcel": "^2.7.0",
-    "react": "^18.2.0",
     "process": "^0.11.10",
+    "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
