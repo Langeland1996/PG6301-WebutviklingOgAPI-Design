@@ -4,8 +4,14 @@ const app = express();
 
 app.get("/login", (req, res) => {
     res.json({
-        username: "admssin"
+        username: "admin"
     });
+})
+
+app.post("/login", (req, res) => {
+    //set something so that GET /login returns username
+    console.log("Test");
+    res.end();
 })
 
 //Tells the server to listen to port 3000
