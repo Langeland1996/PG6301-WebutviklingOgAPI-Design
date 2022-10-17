@@ -2,6 +2,7 @@ GET {{server}}/login
 
 
 ###
+//Simulering av input mot server
 POST {{server}}/login
 Content-Type: application/json
 
