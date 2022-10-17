@@ -9,6 +9,10 @@ const app = express();
 //app.use "Middleware"
 app.use(bodyParser.json());
 app.use(cookieParser());
+// needed to use post request.
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 
 
 //
@@ -37,10 +41,12 @@ app.post("/login", (req, res) => {
     const {username, password} = req.body;
 
     // If username and password in the body == users values in "database" => 200 OK
-    if(users.find(u => u.username === username).password === password){
+    const user = users.find(u => u.username === username)
+    if(user && user.password === password){
         res.cookie("username", username)
         res.sendStatus(200)
     } else {
+        //Unauthorized
         res.sendStatus(401)
     }
 })
