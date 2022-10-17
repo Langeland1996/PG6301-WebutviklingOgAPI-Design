@@ -46,7 +46,8 @@ app.post("/login", (req, res) => {
 })
 
 
-
+//Serves static files from "public" directory.
+app.use(express.static("public"))
 
 
 //Tells the server to listen to port 3000

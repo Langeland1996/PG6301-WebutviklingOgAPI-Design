@@ -1,3 +1,6 @@
+//Simurering av get methods
+
+###
 GET {{server}}/login
 
 

@@ -5,9 +5,10 @@ ExpressJS web server for Java (Node)
 * [x] Respond to simple request
   * [x] get request
   * [x] post request
-* [ ] JSON
-* [ ] static files
-* [ ] Cookies
+* [x] JSON
+* [x] Cookies
+* [x] static files
+* [x] HTML forms
 * [ ] Express middleware (app.use)
   * [ ] Enforce user is logged in
 * [ ] Routes
