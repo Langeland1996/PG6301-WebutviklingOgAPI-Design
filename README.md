@@ -1,11 +1,11 @@
 ## TODO: Deploy project
 =============
 
-* [ ] Simple express application
-* [ ] Static pages
-* [ ] Deploy to website
+* [x] Simple express application
+* [x] Static pages
+* [-] Deploy to website
+* [x] API methods GET POST /login
 * [ ] Bonus: Prettier with Husky
-* [ ] API methods GET POST /login
 * [ ] React application with React Router
   * [ ] <BrowserRouter /> affects the server
 * [ ] Connect frontend to backend
