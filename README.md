@@ -1,9 +1,9 @@
 ## Communication between frontend and backend
 ================
-* [ ] Create frontend and backend
-  * [ ] root project with concurrently, prettier and husky
-  * [ ] client project with parcel, react, react-dom, react-router-dom
-  * [ ] server project with nodemon, express, body-parser, cookie-parser, dotenv
+* [x] Create frontend and backend
+  * [x] root project with concurrently, prettier and husky
+  * [x] client project with parcel, react, react-dom, react-router-dom
+  * [x] server project with nodemon, express, body-parser, cookie-parser, dotenv
 * [ ] get endpoint i express
 * [ ] husky + prettier
 * [ ] Deploy
