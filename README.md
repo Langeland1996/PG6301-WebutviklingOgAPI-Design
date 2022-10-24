@@ -4,11 +4,12 @@
   * [x] root project with concurrently, prettier and husky
   * [x] client project with parcel, react, react-dom, react-router-dom
   * [x] server project with nodemon, express, body-parser, cookie-parser, dotenv
-* [ ] get endpoint i express
-* [ ] husky + prettier
+* [x] husky + prettier
+* [x] GET endpoint i express
 * [ ] Deploy
   * [ ] npm build => npm install --include=dev && parcel && server npm install
   * [ ] npm start => node server.js
+* [ ] Serve react application from Express
 * [ ] GET /api/login from frontpage
   * [ ] fetch data from server
   * [ ] Loading time
