@@ -6,9 +6,9 @@
   * [x] server project with nodemon, express, body-parser, cookie-parser, dotenv
 * [x] husky + prettier
 * [x] GET endpoint i express
-* [ ] Deploy
-  * [ ] npm build => npm install --include=dev && parcel && server npm install
-  * [ ] npm start => node server.js
+* [x] Deploy
+  * [x] npm build => npm install --include=dev && parcel && server npm install
+  * [x] npm start => node server.js
 * [ ] Serve react application from Express
 * [ ] GET /api/login from frontpage
   * [ ] fetch data from server
