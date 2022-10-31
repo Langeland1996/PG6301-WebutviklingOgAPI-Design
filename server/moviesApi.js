@@ -4,7 +4,11 @@ export function MoviesApi(mongoDatabase) {
   const router = new Router();
 
   router.get("/", async (req, res) => {
-    const movies = await mongoDatabase.collection("movies").find().toArray();
+    const movies = await mongoDatabase
+      .collection("movies")
+      .find()
+      .limit(10)
+      .toArray();
 
     res.json(movies);
   });

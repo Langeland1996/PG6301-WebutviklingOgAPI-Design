@@ -14,7 +14,10 @@ mongoClient.connect().then(async () => {
   console.log("Connected to mongodb... kinda");
 });
 
-app.use("/api/movies", MoviesApi(mongoClient.db("pg6301-7")));
+app.use(
+  "/api/movies",
+  MoviesApi(mongoClient.db(process.env.MONGODB_DATABASENAME))
+);
 
 app.use(express.static("../client/dist"));
 
