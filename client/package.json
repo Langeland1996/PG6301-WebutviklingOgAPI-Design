@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "parcel watch index.html",
+    "build": "npm install --include=dev parcel build index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.7.0"
+    "parcel": "^2.7.0",
+    "process": "^0.11.10"
   },
   "dependencies": {
     "@parcel/transformer-react-refresh-wrap": "^2.7.0",
